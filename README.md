@@ -6,9 +6,5 @@ Connect with me
 * **Email**: [kyoonkim01@gmail.com](mailto:kyoonkim01@gmail.com)
 * **LinkedIn**: [linkedin.com/in/kyoonkim](https://linkedin.com/in/kyoonkim)
 
-# Achievements
+# Projects
 
-
-# Competencies
-
-* 
