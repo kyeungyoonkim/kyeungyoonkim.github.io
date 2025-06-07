@@ -4,7 +4,7 @@ This portfolio highlights my applied statistics foundation, AI/DS/ML projects, a
 
 Connect with me
 * Email: kyoonkim01@gmail.com
-<br>* LinkedIn: linkedin.com/kyoonkim
+* LinkedIn: linkedin.com/kyoonkim
 
 # Achievements
 
