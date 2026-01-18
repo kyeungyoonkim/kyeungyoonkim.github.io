@@ -1,17 +1,95 @@
 <!DOCTYPE HTML>
-<!--
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
-<title>Yoon Kim's Portfolio</title>
+<title>Yoon Kim's Learns</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<style>
+    /* 블로그 리스트 컨테이너 */
+    .blog-list {
+        width: 100%;
+        max-width: 900px; /* 너무 퍼지지 않게 중앙 정렬 */
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    /* 개별 포스트 스타일 */
+    .blog-post {
+        border-bottom: 1px solid #eeeeee; /* 게시글 사이 구분선 */
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: background-color 0.2s;
+    }
+    
+    .blog-post:hover {
+        background-color: #fafafa; /* 마우스 올렸을 때 살짝 효과 */
+        padding-left: 1rem; /* 살짝 들여쓰기 효과 */
+    }
+
+    /* 날짜 스타일 */
+    .blog-post .date {
+        font-size: 0.8rem;
+        color: #999;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.1em;
+    }
+
+    /* 제목 스타일 */
+    .blog-post h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    
+    .blog-post h2 a {
+        border-bottom: none;
+        color: inherit;
+    }
+    
+    .blog-post h2 a:hover {
+        color: #18bfef; /* 링크 호버 색상 */
+    }
+
+    /* 본문 요약 스타일 */
+    .blog-post p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 태그 스타일 (기술 블로그용) */
+    .tags-container {
+        margin-bottom: 1rem;
+    }
+    
+    .tech-tag {
+        display: inline-block;
+        background: #f4f4f4;
+        color: #666;
+        font-size: 0.75rem;
+        padding: 0.2rem 0.8rem;
+        border-radius: 20px;
+        margin-right: 0.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Read More 버튼을 텍스트 링크로 변경 */
+    .read-more {
+        font-weight: bold;
+        border-bottom: 1px dotted #ccc;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+</style>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -20,86 +98,103 @@ gtag('js', new Date());
 gtag('config', 'G-10S5HCH3W3');
 </script>
 </head>
-<body>
+<body class="is-preload">
 
-<!-- Wrapper -->
-<div id="wrapper" class="fade-in">
+<div id="wrapper">
 
-<!-- Intro -->
-<div id="intro">
-<h1>Yoon Kim <br />
-Portfolio</h1>
-<p>Follow me on <a href="https://www.linkedin.com/in/kyoonkim" target="_blank">LinkedIn</a></p>
-<ul class="actions">
-<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-</ul>
+    <header id="header">
+        <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">About</a></li>
+            <li><a href="generic.html">Projects</a></li>
+            <li class="active"><a href="generic2.html">Learns</a></li>
+            <li><a href="elements.html">Skills</a></li>
+            <li><a href="elements2.html">CV & Contact</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+            <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+
+        <header class="major">
+            <h1>Learns</h1>
+            <p>Technical notes, study logs, and engineering insights.<br>
+            품질 엔지니어로서 배운 것들과 통계/데이터 연구 기록을 남깁니다.</p>
+        </header>
+
+        <div class="blog-list">
+
+            <article class="blog-post">
+                <span class="date">Jan 18, 2026</span>
+                <div class="tags-container">
+                    <span class="tech-tag">#SAS</span>
+                    <span class="tech-tag">#Certification</span>
+                </div>
+                <h2><a href="#">비전공자가 SAS 자격증을 준비하며 알게 된 것들</a></h2>
+                <p>
+                    통계학 전공자로서 R과 Python은 익숙했지만, SAS는 완전히 다른 세상이었습니다. 
+                    특히 Data Step과 Proc Step의 작동 원리를 이해하는 과정에서 겪은 시행착오와 
+                    효율적인 매크로 변수 활용법을 정리했습니다.
+                </p>
+                <a href="#" class="read-more">Read full story &rarr;</a>
+            </article>
+
+            <article class="blog-post">
+                <span class="date">Jan 10, 2026</span>
+                <div class="tags-container">
+                    <span class="tech-tag">#PowerBI</span>
+                    <span class="tech-tag">#Engineering</span>
+                </div>
+                <h2><a href="#">제조 공정 데이터, 엑셀에서 Power BI로 자동화하기</a></h2>
+                <p>
+                    매월 반복되는 품질 리포트 작성 시간을 3시간에서 10분으로 줄였습니다. 
+                    DAX 함수를 이용해 불량률(Defect Rate)을 실시간으로 시각화하고, 
+                    동료 엔지니어들이 쉽게 데이터를 조회할 수 있도록 대시보드를 구축한 경험입니다.
+                </p>
+                <a href="#" class="read-more">Read full story &rarr;</a>
+            </article>
+
+            <article class="blog-post">
+                <span class="date">Dec 28, 2025</span>
+                <div class="tags-container">
+                    <span class="tech-tag">#HCI</span>
+                    <span class="tech-tag">#Accessibility</span>
+                </div>
+                <h2><a href="#">데이터 시각화와 접근성: 모두를 위한 차트 만들기</a></h2>
+                <p>
+                    데이터 분석 결과가 아무리 훌륭해도, 누군가에게 보이지 않는다면 의미가 있을까요? 
+                    색맹/색약 사용자를 고려한 컬러 팔레트 선정부터 스크린 리더를 위한 Alt text 작성법까지, 
+                    HCI 관점에서 접근성 높은 데이터 시각화를 고민해 보았습니다.
+                </p>
+                <a href="#" class="read-more">Read full story &rarr;</a>
+            </article>
+
+        </div>
+        <footer>
+            <div class="pagination">
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page">2</a>
+                <a href="#" class="page">3</a>
+                <span class="extra">&hellip;</span>
+                <a href="#" class="next">Next</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="copyright">
+        <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+
 </div>
 
-<!-- Header -->
-<header id="header">
-<a href="index.html" class="logo">Yoon Kim Portfolio</a>
-</header>
-
-<!-- Nav -->
-<nav id="nav">
-<ul class="links">
-<li><a href="index.html">About</a></li>
-<li><a href="generic.html">Projects</a></li>
-<li class="active"><a href="generic2.html">More Projects</a></li>
-<li><a href="elements.html">Skills</a></li>
-<li><a href="elements2.html">CV & Contact</a></li>
-</ul>
-<ul class="icons">
-<li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-<li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-<li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-</ul>
-</nav>
-
-<!-- Main -->
-<div id="main">
-   <!-- Posts -->
-   <section class="posts">
-       <article>
-           <header>
-               <span class="date">Month Year</span>
-               <h2>Name<br />
-               </a></h2>
-           </header>
-           <a href="#" class="image fit"><img src="images.jpg" alt="" /></a>
-           <p>describe.</p>
-   <p><strong>Skills Used:</strong> </p>
-
-           <ul class="actions special">
-               <li><a href="#" class="button">Full Story</a></li>
-           </ul>
-       </article>
-    
-   </section>
-
-
-<!-- Footer -->
-<footer>
-<div class="pagination">
-<a href="https://yoonkim18.github.io/webportfolio/index.html" class="previous">Prev</a>
-<a href="https://yoonkim18.github.io/webportfolio/index2.html" class="page active">2</a>
-<a href="#" class="page">3</a>
-<span class="extra">&hellip;</span>
-<a href="#" class="next">Next</a>
-</div>
-</footer>
-
-</div>
-
-
-<!-- Copyright -->
-<div id="copyright">
-<ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-</div>
-
-</div>
-
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
