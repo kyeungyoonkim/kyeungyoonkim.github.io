@@ -1,175 +1,364 @@
 <!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-    <head>
-        <title>Yoon Kim's Portfolio</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        
-    
-    
-    
-    
-    </head>
-    <body class="is-preload">
+<head>
+<title>Skills & Experience | Yoon Kim</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-        <!-- Wrapper -->
-            <div id="wrapper">
+<style>
+    /* 섹션 공통 스타일 */
+    .resume-section {
+        margin-bottom: 4rem;
+    }
+    
+    .resume-section h2 {
+        font-size: 1.8rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        color: #212931;
+    }
 
-                <!-- Header -->
-                    <header id="header">
-                        <a href="index.html" class="logo">Yoon Kim Portfolio</a>
-                    </header>
+    /* 1. 경력 (Experience) 스타일 */
+    .job-item {
+        margin-bottom: 2.5rem;
+    }
 
-                <!-- Nav -->
-                    <nav id="nav">
-                        <ul class="links">
-                            <li><a href="index.html">About</a></li>
-                            <li><a href="generic.html">Projects</a></li>
-                            <li><a href="generic2.html">Learns</a></li>
-                            <li class="active"><a href="elements.html">Skills</a></li>
-                            <li><a href="elements2.html">CV & Contact</a></li>
+    .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 0.3rem;
+    }
+
+    .job-role {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #212931;
+    }
+
+    .job-company {
+        font-size: 1.1rem;
+        color: #18bfef; /* 포인트 컬러 */
+        font-weight: 600;
+        margin-right: auto;
+        padding-left: 0.5rem;
+    }
+
+    .job-date {
+        font-style: italic;
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .job-details {
+        margin-top: 0.5rem;
+        padding-left: 1.2rem;
+    }
+    
+    .job-details li {
+        margin-bottom: 0.5rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* 2. 스킬 (Skills) 스타일 */
+    .skill-category {
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-title {
+        font-weight: 700;
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #444;
+        font-size: 1rem;
+    }
+
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .skill-tag {
+        background: #f4f6f8;
+        border: 1px solid #e1e4e8;
+        color: #24292e;
+        padding: 0.3rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    /* 3. 기타 리스트 스타일 (Awards 등) */
+    .simple-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .simple-list li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+
+    .simple-list li::before {
+        content: "•";
+        color: #18bfef; /* 포인트 컬러 */
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+    }
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-10S5HCH3W3');
+</script>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="generic.html">Projects</a></li>
+                <li><a href="generic2.html">Learns</a></li>
+                <li class="active"><a href="elements.html">Skills</a></li>
+                <li><a href="elements2.html">CV & Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+
+            <section class="post">
+                <header class="major">
+                    <h1>Experience<br />& Skills</h1>
+                    <p>Professional background and technical competencies.</p>
+                </header>
+
+                <div class="resume-section">
+                    <h2>Experience</h2>
+
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Quality Engineer</span>
+                            <span class="job-company">@ Qcells Georgia Inc.</span>
+                            <span class="job-date">Mar 2025 – Present</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Engineered an automated data reporting pipeline using Python and Spotfire, reducing manual reporting time and providing daily power output metrics to executive leadership.</li>
+                            <li>Developing predictive models (Regression & Classification) to identify critical factors impacting N-type cell efficiency, utilizing feature importance analysis to optimize manufacturing yields.</li>
+                            <li>Collaborated with cross-functional global teams to translate complex quality data into actionable insights, driving continuous improvement in manufacturing processes.</li>
                         </ul>
-                        <ul class="icons">
-                            <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-                            <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        </ul>
-                    </nav>
-
-                <!-- Main -->
-                    <div id="main">
-
-                        <!-- Post -->
-                            <section class="post">
-                                <header class="major">
-                                    
-                                </header>
-
-                                <!-- Text stuff -->
-                                <h2>Experience</h2>
-                                <ul>
-                                    <li>
-                                        <strong>Quality Engineer – Qcells Georgia Inc.</strong> <em>(Mar 2025 – Present)</em><br>
-                                        • Engineered an automated data reporting pipeline using Python and Spotfire, reducing manual reporting time and providing daily power output metrics to executive leadership.<br>
-                                        • Developing predictive models (Regression & Classification) to identify critical factors impacting N-type cell efficiency, utilizing feature importance analysis to optimize manufacturing yields.<br>
-                                        • Collaborated with cross-functional global teams to translate complex quality data into actionable insights, driving continuous improvement in manufacturing processes.
-                                    </li>
-                                    <br>
-
-                                    <li>
-                                        <strong>Statistics Content Creator – Purdue University</strong> <em>(Sep 2023 – Dec 2024)</em><br>
-                                        • Designed and programmed over 150 randomized statistics problems using <strong>Perl</strong> and <strong>HTML</strong> for the Statistics Department’s e-learning platform.<br>
-                                        • Applied strong quantitative and programming knowledge to enhance content accuracy and reliability with minimal supervision.<br>
-                                        • Strengthened instructional content delivery through statistical computation and algorithmic randomization techniques.
-                                    </li>
-                                    <br>
-                                
-                                    <li>
-                                        <strong>Undergraduate Data Science Researcher – Purdue University</strong> <em>(Aug 2023 – May 2024)</em><br>
-                                        • Collaborated with <strong>Beck’s Hybrids Inc.</strong> to analyze seed quality and germination factors using <strong>Python, R, and SQL</strong>.<br>
-                                        • Extracted and visualized historical production and laboratory datasets for quality prediction and trend modeling.<br>
-                                        • Conducted exploratory data analysis (EDA), outlier detection, and predictive modeling to support data-driven agricultural insights.
-                                    </li>
-                                    <br>
-                                
-                                    <li>
-                                        <strong>Data Analytics Intern – Laon People Inc.</strong> <em>(May 2023 – Jul 2023)</em><br>
-                                        • Contributed to image-based defect detection research for <strong>NAVI AI Software</strong>, integrating <strong>OpenCV</strong> and deep learning-based analytics.<br>
-                                        • Performed statistical validation and visual analysis of training datasets (e.g., image balance, color distribution, aspect ratios).<br>
-                                        • Supported operational analysis to improve defect classification performance for smart factory AI vision applications.
-                                    </li>
-                                    <br>
-                                
-                                    <li>
-                                        <strong>International Student Office Assistant – Foothill College</strong> <em>(Feb 2022 – Dec 2022)</em><br>
-                                        • Managed and analyzed international student visit data using <strong>Excel VBA</strong> to forecast service demand and optimize resource allocation.<br>
-                                        • Led outreach and communications to support cultural and academic programs, enhancing student engagement and inclusivity.
-                                    </li>
-                                
-                                </ul>
-                                <hr />
-                                    <h2>Skills and Tools</h2>
-<ul>
-            <li><strong>Programming Languages:</strong> Python, R, SAS, SQL (MySQL), Java, HTML/CSS, JavaScript, CLI, Perl</li>
-            <li><strong>Data Analysis & ML Libraries:</strong> Pandas, NumPy, SciPy, Statsmodels, Scikit-learn, Tidyverse, ggplot2, OpenCV </li>
-            <li><strong>AI Frameworks:</strong> TensorFlow, PyTorch</li>
-            <li><strong>Statistical & ML Techniques:</strong> A/B Testing, Linear Regression, Logistic Regression, Hypothesis Testing, ANOVA, Time Series Forecasting, Clustering, Decision Trees, Statistical Modeling, Bayesian Modeling</li>
-            <li><strong>Data & Visualization:</strong> Tableau, PowerBI, Excel, Matplotlib, Seaborn, Plotly </li>
-
-</ul>
-
-                    
-<hr/>
-<h2>Awards and Certifications</h2>
-<ul>
-<li><strong>ASA DataFest 2024:</strong> Best Data Visualization (Purdue University)</li>
-<li><strong>Dean's List:</strong> Foothill College & Purdue University Every semester (2021 – 2024)</li>
-<li>Women in Big Data Mentoring Program – Mentee</li>
-<li>Google Data Analytics Specialization – Coursera</li>
-<li>IBM Data Analyst Professional Certification – Coursera</li>
-</ul>
-
-
-<hr />
-<h2>Professional Affiliations</h2>
-<ul>
-<li>Association for Computing Machinery (ACM) – Member <em>(2025 – Present)</em></li>
-<li>ACM SIGCHI (Special Interest Group on Computer-Human Interaction) – Member <em>(2025 – Present)</em></li>
-<li>Alpha Alpha Alpha (Honor society for first-gen college students) – Member <em>(2024 – Present)</em></li>
-<li>American Statistical Association (ASA) – Member <em>(2023 – Present)</em></li>
-</ul>        
-                    
-                                        <hr />
-                                    <h2>Community & Outreach</h2>
-                                        <ul>
-                                            <li><strong>American Red Cross – NHQ</strong> <em>(2024–2025)</em><br>
-                                                Quality Assurance Analyst (Volunteer), ensuring data integrity and process compliance for disaster calls.
-                                            </li>
-                                            <li><strong>St. Joseph Rehabilitation Center</strong> <em>(2012–2015)</em><br>
-                                                Volunteer in a family-based service role supporting senior disabilities care and rehabilitation.
-                                            </li>
-                                            
-                                        </ul>
-                                        
-                            
-
-
-                        
-
-                        
-                    
-
-                                    
-
-                                
-                                
-
-
-
-
-                <!-- Copyright -->
-                </section></div>    <div id="copyright">
-                        <ul><li>&copy;Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
                     </div>
 
-            </div>
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Statistics Content Creator</span>
+                            <span class="job-company">@ Purdue University</span>
+                            <span class="job-date">Sep 2023 – Dec 2024</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Designed and programmed over 150 randomized statistics problems using <strong>Perl</strong> and <strong>HTML</strong> for the Statistics Department’s e-learning platform.</li>
+                            <li>Applied strong quantitative and programming knowledge to enhance content accuracy and reliability with minimal supervision.</li>
+                            <li>Strengthened instructional content delivery through statistical computation and algorithmic randomization techniques.</li>
+                        </ul>
+                    </div>
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Undergraduate Data Science Researcher</span>
+                            <span class="job-company">@ Purdue University</span>
+                            <span class="job-date">Aug 2023 – May 2024</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Collaborated with <strong>Beck’s Hybrids Inc.</strong> to analyze seed quality and germination factors using <strong>Python, R, and SQL</strong>.</li>
+                            <li>Extracted and visualized historical production and laboratory datasets for quality prediction and trend modeling.</li>
+                            <li>Conducted exploratory data analysis (EDA), outlier detection, and predictive modeling to support data-driven agricultural insights.</li>
+                        </ul>
+                    </div>
 
-    </body>
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Data Analytics Intern</span>
+                            <span class="job-company">@ Laon People Inc.</span>
+                            <span class="job-date">May 2023 – Jul 2023</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Contributed to image-based defect detection research for <strong>NAVI AI Software</strong>, integrating <strong>OpenCV</strong> and deep learning-based analytics.</li>
+                            <li>Performed statistical validation and visual analysis of training datasets (e.g., image balance, color distribution, aspect ratios).</li>
+                            <li>Supported operational analysis to improve defect classification performance for smart factory AI vision applications.</li>
+                        </ul>
+                    </div>
 
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">International Student Office Assistant</span>
+                            <span class="job-company">@ Foothill College</span>
+                            <span class="job-date">Feb 2022 – Dec 2022</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Managed and analyzed international student visit data using <strong>Excel VBA</strong> to forecast service demand and optimize resource allocation.</li>
+                            <li>Led outreach and communications to support cultural and academic programs, enhancing student engagement and inclusivity.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="resume-section">
+                    <h2>Skills & Tools</h2>
+
+                    <div class="skill-category">
+                        <span class="skill-title">Programming Languages</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">R</span>
+                            <span class="skill-tag">SAS</span>
+                            <span class="skill-tag">SQL (MySQL)</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Perl</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-title">Data Analysis & ML Libraries</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Statsmodels</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Tidyverse</span>
+                            <span class="skill-tag">ggplot2</span>
+                            <span class="skill-tag">OpenCV</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-title">AI Frameworks</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-title">Statistical & ML Techniques</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">A/B Testing</span>
+                            <span class="skill-tag">Linear/Logistic Regression</span>
+                            <span class="skill-tag">Hypothesis Testing</span>
+                            <span class="skill-tag">ANOVA</span>
+                            <span class="skill-tag">Time Series Forecasting</span>
+                            <span class="skill-tag">Clustering</span>
+                            <span class="skill-tag">Decision Trees</span>
+                            <span class="skill-tag">Bayesian Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="skill-title">Data Visualization & Tools</span>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">PowerBI</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Seaborn</span>
+                            <span class="skill-tag">Plotly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="resume-section">
+                    <h2>Awards & Certifications</h2>
+                    <ul class="simple-list">
+                        <li><strong>ASA DataFest 2024:</strong> Best Data Visualization (Purdue University)</li>
+                        <li><strong>Dean's List:</strong> Foothill College & Purdue University (Every semester, 2021–2024)</li>
+                        <li><strong>Mentee:</strong> Women in Big Data Mentoring Program</li>
+                        <li><strong>Certification:</strong> Google Data Analytics Specialization (Coursera)</li>
+                        <li><strong>Certification:</strong> IBM Data Analyst Professional Certification (Coursera)</li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <div class="resume-section">
+                    <h2>Professional Affiliations</h2>
+                    <ul class="simple-list">
+                        <li><strong>Association for Computing Machinery (ACM)</strong> – Member (2025–Present)</li>
+                        <li><strong>ACM SIGCHI</strong> – Member (2025–Present)</li>
+                        <li><strong>Alpha Alpha Alpha Honor Society</strong> – Member (2024–Present)</li>
+                        <li><strong>American Statistical Association (ASA)</strong> – Member (2023–Present)</li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <div class="resume-section">
+                    <h2>Community & Outreach</h2>
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Quality Assurance Analyst (Volunteer)</span>
+                            <span class="job-company">@ American Red Cross</span>
+                            <span class="job-date">2024–2025</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Ensured data integrity and process compliance for disaster calls.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="job-item">
+                        <div class="job-header">
+                            <span class="job-role">Rehabilitation Volunteer</span>
+                            <span class="job-company">@ St. Joseph Rehabilitation Center</span>
+                            <span class="job-date">2012–2015</span>
+                        </div>
+                        <ul class="job-details">
+                            <li>Supported senior disabilities care and rehabilitation in a family-based service role.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div id="copyright">
+            <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
