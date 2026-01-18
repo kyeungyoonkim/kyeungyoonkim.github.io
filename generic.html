@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
 <title>Projects | Yoon Kim</title>
@@ -11,138 +6,270 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+<style>
+    /* 프로젝트 컨테이너 */
+    .project-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    /* 개별 프로젝트 카드 (Flexbox) */
+    .project-card {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        margin-bottom: 5rem; /* 카드 간 간격 */
+        opacity: 0; /* 애니메이션을 위해 숨김 */
+        animation: fadeIn 1s forwards;
+    }
+
+    /* 짝수 번째 카드는 반대로 배치 (지그재그 효과) */
+    .project-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    /* 이미지 영역 */
+    .project-image {
+        flex: 1.2;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 부드러운 그림자 */
+        transition: transform 0.3s ease;
+    }
+
+    .project-image img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .project-image:hover {
+        transform: translateY(-5px); /* 마우스 올리면 살짝 뜸 */
+    }
+
+    /* 텍스트 영역 */
+    .project-content {
+        flex: 1;
+        text-align: left; /* 왼쪽 정렬 */
+    }
+
+    .project-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .project-content .date {
+        display: block;
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 0.5rem;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .project-content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    /* 스킬 태그 스타일 */
+    .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    /* 태그별 색상 */
+    .tag.tableau { background-color: #E1F5FE; color: #0277BD; }
+    .tag.excel { background-color: #E8F5E9; color: #2E7D32; }
+    .tag.python { background-color: #FFF3E0; color: #EF6C00; }
+    .tag.stats { background-color: #F3E5F5; color: #7B1FA2; }
+
+    /* 버튼 스타일 재정의 */
+    .button.small-btn {
+        font-size: 0.8rem;
+        padding: 0 1.5rem;
+        height: 3rem;
+        line-height: 3rem;
+        box-shadow: none;
+        border: 2px solid #212931;
+    }
+    
+    .button.small-btn:hover {
+        background: #212931;
+        color: #fff !important;
+    }
+
+    /* 모바일 대응 (세로 배치) */
+    @media screen and (max-width: 800px) {
+        .project-card, .project-card:nth-child(even) {
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .project-content {
+            text-align: center; /* 모바일에서는 중앙 정렬 */
+        }
+        
+        .skill-tags {
+            justify-content: center;
+        }
+    }
+
+    /* 등장 애니메이션 */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-10S5HCH3W3');
+</script>
 </head>
-<body>
+<body class="is-preload">
 
-<!-- Wrapper -->
-<div id="wrapper" class="fade-in">
+    <div id="wrapper">
 
-<!-- Intro -->
-<div id="intro">
-<h1>Yoon Kim <br />
-Portfolio</h1>
-<p>Follow me on <a href="https://www.linkedin.com/in/kyoonkim" target="_blank">LinkedIn</a></p>
-<ul class="actions">
-<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-</ul>
-</div>
+        <header id="header">
+            <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+        </header>
 
-<!-- Header -->
-<header id="header">
-<a href="index.html" class="logo">Yoon Kim Portfolio</a>
-</header>
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About</a></li>
+                <li class="active"><a href="generic.html">Projects</a></li>
+                <li><a href="generic2.html">Learns</a></li>
+                <li><a href="elements.html">Skills</a></li>
+                <li><a href="elements2.html">CV & Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
 
-<!-- Nav -->
-<nav id="nav">
-<ul class="links">
-<li><a href="index.html">About</a></li>
-<li class="active"><a href="generic.html">Projects</a></li>
-<li><a href="generic2.html">Learns</a></li>
-<li><a href="elements.html">Skills</a></li>
-<li><a href="elements2.html">CV & Contact</a></li>
-</ul>
-<ul class="icons">
-<li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-<li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-<li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-</ul>
-</nav>
+        <div id="main">
+            
+            <header class="major">
+                <h1>Data Projects</h1>
+                <p>A collection of my data analysis, visualization, and engineering projects.<br>
+                데이터를 통해 문제를 정의하고 해결책을 제시합니다.</p>
+            </header>
 
-<!-- Main -->
-<div id="main">
-   <!-- Posts -->
-   <section class="posts">
-       <article>
-           <header>
-               <span class="date">March 2024</span>
-               <h2>College tuition analysis<br />
-               </a></h2>
-           </header>
-           <a href="#" class="image fit"><img src="images/College_tuition_analysis.png" alt="" /></a>
-           <p>This viz aims to look at some elements related to tuition, such as whether there is any correlation between tuition and income level, noticeable diversity by states, and increased rates in early and mid-career pay.</p>
-   <p><strong>Skills Used:</strong> Tableau </p>
-           <ul class="actions special">
-               <li><a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="button">Full Story</a></li>
-           </ul>
-       </article>
+            <div class="project-container">
 
-<article>
-           <header>
-               <span class="date">March 2024</span>
-               <h2>Starbucks drinks analysis<br />
-               </a></h2>
-           </header>
-           <a href="#" class="image fit"><img src="images/starbucks_drink_analysis.png" alt="" /></a>
-           <p>This Viz aims to look at the features of Starbucks drinks along with the distribution of the Starbucks stores.</p>
-   <p><strong>Skills Used:</strong> Tableau </p>
-           <ul class="actions special">
-               <li><a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" class="button">Full Story</a></li>
-           </ul>
-       </article>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank">
+                            <img src="images/College_tuition_analysis.png" alt="College Tuition Analysis" />
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <span class="date">March 2024</span>
+                        <h2>College Tuition<br>Analysis</h2>
+                        <div class="skill-tags">
+                            <span class="tag tableau">Tableau</span>
+                            <span class="tag stats">Correlation</span>
+                            <span class="tag stats">Data Viz</span>
+                        </div>
+                        <p>Analyzed the correlation between tuition fees and income levels across US states. 
+                        Investigated whether higher tuition correlates with increased early and mid-career pay rates.</p>
+                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank" class="button small-btn">View Dashboard</a>
+                    </div>
+                </div>
 
-   <article>
-           <header>
-               <span class="date">May 2024</span>
-               <h2>Bike Sales Dashboard<br />
-               </a></h2>
-           </header>
-           <a href="#" class="image fit"><img src="images/BikeSalesDashboard.png" alt="" /></a>
-           <p>This dashboard aims to look at some graphs to analyze bike sales.</p>
-   <p><strong>Skills Used:</strong> Excel (pivot table, advanced functions) </p>
-           <ul class="actions special">
-               <li><a href="" class="button">Full Story</a></li>
-           </ul>
-       </article>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank">
+                            <img src="images/starbucks_drink_analysis.png" alt="Starbucks Drinks Analysis" />
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <span class="date">March 2024</span>
+                        <h2>Starbucks Drinks<br>& Store Locations</h2>
+                        <div class="skill-tags">
+                            <span class="tag tableau">Tableau</span>
+                            <span class="tag stats">Geospatial</span>
+                        </div>
+                        <p>An interactive dashboard visualizing nutritional features of Starbucks drinks and analyzing store distribution patterns globally.</p>
+                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank" class="button small-btn">View Dashboard</a>
+                    </div>
+                </div>
 
-    <article>
-           <header>
-               <span class="date">May 2023</span>
-               <h2>College Major<br />
-               and Salary EDA</a></h2>
-           </header>
-           <a href="#" class="image fit"><img src="images/college.jpg" alt="" /></a>
-           <p>I looked at the college graduates' dataset to find out which majors are popular among students and if salary and employment rates are related.</p>
-   <p><strong>Skills Used:</strong> Python - pandas, numpy, seaborn, matplotlib, plotly</p>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/BikeSalesDashboard.png" alt="Bike Sales Dashboard" />
+                    </div>
+                    <div class="project-content">
+                        <span class="date">May 2024</span>
+                        <h2>Bike Sales<br>Performance</h2>
+                        <div class="skill-tags">
+                            <span class="tag excel">Excel</span>
+                            <span class="tag excel">Pivot Tables</span>
+                        </div>
+                        <p>Constructed a sales dashboard using advanced Excel functions and Pivot Tables to track key performance indicators (KPIs) and customer demographics.</p>
+                        <a href="#" class="button disabled small-btn">View Project</a>
+                    </div>
+                </div>
 
-           <ul class="actions special">
-               <li><a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" class="button">Full Story</a></li>
-           </ul>
-       </article>
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank">
+                            <img src="images/college.jpg" alt="College Major EDA" />
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <span class="date">May 2023</span>
+                        <h2>Major & Salary<br>Exploratory Analysis</h2>
+                        <div class="skill-tags">
+                            <span class="tag python">Python</span>
+                            <span class="tag python">Pandas</span>
+                            <span class="tag python">Seaborn</span>
+                        </div>
+                        <p>Conducted EDA on college graduate datasets to identify popular majors and the correlation between field of study, employment rates, and salary outcomes.</p>
+                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank" class="button small-btn">View Code on Kaggle</a>
+                    </div>
+                </div>
 
-   
-   </section>
+            </div>
+            </div>
 
+        <div id="copyright">
+            <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
 
-<!-- Footer -->
-<footer>
-<div class="pagination">
-<!--<a href="#" class="previous">Prev</a>-->
-<a href="https://yoonkim18.github.io/webportfolio/index.html" class="page active">1</a>
-<a href="https://yoonkim18.github.io/webportfolio/index2.html" class="page">2</a>
-<a href="#" class="page">3</a>
-<span class="extra">&hellip;</span>
-<a href="https://yoonkim18.github.io/webportfolio/index2.html" class="next">Next</a>
-</div>
-</footer>
+    </div>
 
-</div>
-
-
-<!-- Copyright -->
-<div id="copyright">
-<ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-</div>
-
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
