@@ -7,172 +7,6 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-<style>
-    /* --- CSS 수정 시작 --- */
-
-    /* 프로젝트 컨테이너: 화면 크기에 따라 유동적으로 변함 */
-    .project-container {
-        width: 90%; /* 좌우 여백을 화면 크기에 비례하게 */
-        max-width: 1200px; /* 너무 넓어지는 것 방지 (원하면 1400px 등으로 수정 가능) */
-        margin: 0 auto;
-        padding: 4rem 0;
-    }
-
-    /* 개별 프로젝트 카드 (Flexbox) */
-    .project-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* 요소 사이 간격 균등 분배 */
-        gap: 5%; /* 고정된 rem 대신 %를 사용하여 화면 크기에 따라 간격 조절 */
-        margin-bottom: 6rem; /* 카드 간 세로 간격 */
-        opacity: 0; 
-        animation: fadeIn 1s forwards;
-    }
-
-    /* 짝수 번째 카드는 이미지 위치 반대 (지그재그) */
-    .project-card:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-
-    /* 이미지 영역: 화면의 55% 차지 */
-    .project-image {
-        flex-basis: 55%; 
-        width: 55%;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* 그림자 부드럽게 */
-        transition: transform 0.3s ease;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.5s ease;
-    }
-
-    .project-image:hover {
-        transform: translateY(-5px);
-    }
-    
-    .project-image:hover img {
-        transform: scale(1.03); /* 이미지 살짝 확대 효과 추가 */
-    }
-
-    /* 텍스트 영역: 화면의 40% 차지 */
-    .project-content {
-        flex-basis: 40%;
-        width: 40%;
-        text-align: left;
-    }
-
-    .project-content h2 {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        line-height: 1.2;
-        color: #2c3e50;
-    }
-
-    .project-content .date {
-        display: block;
-        font-size: 0.9rem;
-        color: #888;
-        margin-bottom: 0.8rem;
-        font-family: "Open Sans", sans-serif;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    .project-content p {
-        font-size: 1.1rem;
-        color: #555;
-        line-height: 1.7;
-        margin-bottom: 1.5rem;
-    }
-
-    /* 스킬 태그 스타일 */
-    .skill-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        margin-bottom: 2rem;
-    }
-
-    .tag {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.9rem;
-        border-radius: 50px;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        border: 1px solid transparent; /* 테두리 공간 확보 */
-    }
-
-    /* 태그별 색상 (배경색을 연하게, 글자를 진하게) */
-    .tag.tableau { background-color: #eaf6fc; color: #0277BD; border-color: #b3e5fc; }
-    .tag.excel { background-color: #e8f5e9; color: #2E7D32; border-color: #c8e6c9; }
-    .tag.python { background-color: #fff3e0; color: #e65100; border-color: #ffe0b2; }
-    .tag.stats { background-color: #f3e5f5; color: #7B1FA2; border-color: #e1bee7; }
-
-    /* 버튼 스타일 */
-    .button.small-btn {
-        font-size: 0.85rem;
-        padding: 0 1.8rem;
-        height: 3.2rem;
-        line-height: 3rem;
-        box-shadow: none;
-        border: 2px solid #212931;
-        transition: all 0.3s ease;
-    }
-    
-    .button.small-btn:hover {
-        background: #212931;
-        color: #fff !important;
-    }
-    
-    .button.disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        pointer-events: none;
-    }
-
-    /* --- 반응형 미디어 쿼리 --- */
-    /* 900px 이하(태블릿/모바일)가 되면 세로 배치로 변경 */
-    @media screen and (max-width: 900px) {
-        .project-card, .project-card:nth-child(even) {
-            flex-direction: column; /* 세로 정렬 */
-            gap: 2rem;
-            margin-bottom: 5rem;
-        }
-        
-        /* 이미지와 텍스트를 꽉 차게(100%) 변경 */
-        .project-image, .project-content {
-            flex-basis: 100%;
-            width: 100%;
-            max-width: 600px; /* 모바일에서 이미지가 너무 커지는 것 방지 */
-        }
-        
-        .project-content {
-            text-align: center; /* 텍스트 중앙 정렬 */
-        }
-
-        .project-content h2 {
-            font-size: 1.8rem;
-        }
-        
-        .skill-tags {
-            justify-content: center;
-        }
-    }
-
-    /* 등장 애니메이션 */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -193,14 +27,14 @@ gtag('config', 'G-10S5HCH3W3');
             <ul class="links">
                 <li><a href="index.html">About</a></li>
                 <li class="active"><a href="generic.html">Projects</a></li>
-                <li><a href="generic2.html">Learns</a></li>
+                <li><a href="generic2.html">Learning</a></li>
                 <li><a href="elements.html">Skills</a></li>
                 <li><a href="elements2.html">CV & Contact</a></li>
             </ul>
             <ul class="icons">
-                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle"><span class="label">Kaggle</span></a></li>
-                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle" target="_blank" rel="noopener"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
             </ul>
         </nav>
 
@@ -215,7 +49,7 @@ gtag('config', 'G-10S5HCH3W3');
 
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank">
+                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank" rel="noopener">
                             <img src="images/College_tuition_analysis.png" alt="College Tuition Analysis" />
                         </a>
                     </div>
@@ -229,13 +63,13 @@ gtag('config', 'G-10S5HCH3W3');
                         </div>
                         <p>Analyzed the correlation between tuition fees and income levels across US states. 
                         Investigated whether higher tuition correlates with increased early and mid-career pay rates.</p>
-                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank" class="button small-btn">View Dashboard</a>
+                        <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank" rel="noopener" class="button small-btn">View Dashboard</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank">
+                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank" rel="noopener">
                             <img src="images/starbucks_drink_analysis.png" alt="Starbucks Drinks Analysis" />
                         </a>
                     </div>
@@ -247,7 +81,7 @@ gtag('config', 'G-10S5HCH3W3');
                             <span class="tag stats">Geospatial</span>
                         </div>
                         <p>An interactive dashboard visualizing nutritional features of Starbucks drinks and analyzing store distribution patterns globally.</p>
-                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank" class="button small-btn">View Dashboard</a>
+                        <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank" rel="noopener" class="button small-btn">View Dashboard</a>
                     </div>
                 </div>
 
@@ -269,7 +103,7 @@ gtag('config', 'G-10S5HCH3W3');
 
                 <div class="project-card">
                     <div class="project-image">
-                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank">
+                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank" rel="noopener">
                             <img src="images/college.jpg" alt="College Major EDA" />
                         </a>
                     </div>
@@ -282,7 +116,7 @@ gtag('config', 'G-10S5HCH3W3');
                             <span class="tag python">Seaborn</span>
                         </div>
                         <p>Conducted EDA on college graduate datasets to identify popular majors and the correlation between field of study, employment rates, and salary outcomes.</p>
-                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank" class="button small-btn">View Code on Kaggle</a>
+                        <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank" rel="noopener" class="button small-btn">View Code on Kaggle</a>
                     </div>
                 </div>
 
