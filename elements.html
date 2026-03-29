@@ -32,62 +32,52 @@
 
     .job-header {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2rem;
-        margin-bottom: 0.45rem;
-    }
-
-    .job-title-line {
-        display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: baseline;
-        gap: 0.15rem 0.5rem;
-        width: 100%;
+        flex-wrap: nowrap;
+        gap: 0.75rem 1rem;
+        margin-bottom: 0.35rem;
     }
 
     .job-role {
         font-size: 1.2rem;
         font-weight: 700;
         color: #212931;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: flex-end;
+        gap: 0.35rem 0.65rem;
+        text-align: right;
+        flex: 0 0 auto;
     }
 
     .job-company {
-        font-size: 1.1rem;
-        color: #0d5c63; /* 포인트 컬러 */
+        font-size: 1rem;
+        color: #0d5c63;
         font-weight: 600;
     }
 
-    /* 날짜 + 위치: 한 줄, 작은 글씨 */
-    .job-meta-line {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.35rem;
-        font-family: "Inter", system-ui, sans-serif;
-        font-size: 0.78rem;
-        line-height: 1.35;
-        color: #64748b;
-    }
-
     .job-date {
-        font-style: normal;
+        font-style: italic;
         color: #64748b;
-        font-size: inherit;
-        font-weight: 500;
+        font-size: 0.9rem;
     }
 
-    .job-meta-sep {
-        color: #cbd5e1;
-        font-weight: 400;
-        user-select: none;
-    }
-
-    .job-location {
-        font-size: inherit;
-        color: #94a3b8;
-        font-weight: 500;
-        font-family: inherit;
+    @media screen and (max-width: 640px) {
+        .job-header {
+            flex-wrap: wrap;
+        }
+        .job-meta {
+            width: 100%;
+            justify-content: flex-start;
+            text-align: left;
+        }
     }
 
     .job-details {
@@ -196,15 +186,11 @@ gtag('config', 'G-10S5HCH3W3');
 
                     <div class="job-item">
                         <div class="job-header">
-                            <div class="job-title-line">
-                                <span class="job-role">Quality Engineer</span>
+                            <span class="job-role">Quality Engineer</span>
+                            <span class="job-meta">
                                 <span class="job-company">@ Qcells Georgia Inc.</span>
-                            </div>
-                            <div class="job-meta-line">
                                 <span class="job-date">Mar 2025 – Present</span>
-                                <span class="job-meta-sep">·</span>
-                                <span class="job-location">Cartersville, GA</span>
-                            </div>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Engineered an automated data reporting pipeline using <strong>Python</strong> and <strong>Spotfire</strong>, reducing manual reporting time and providing daily power output metrics to executive leadership.</li>
@@ -215,15 +201,11 @@ gtag('config', 'G-10S5HCH3W3');
 
                     <div class="job-item">
                         <div class="job-header">
-                            <div class="job-title-line">
-                                <span class="job-role">Statistics Content Creator</span>
+                            <span class="job-role">Statistics Content Creator</span>
+                            <span class="job-meta">
                                 <span class="job-company">@ Purdue University</span>
-                            </div>
-                            <div class="job-meta-line">
                                 <span class="job-date">Sep 2023 – Dec 2024</span>
-                                <span class="job-meta-sep">·</span>
-                                <span class="job-location">West Lafayette, IN</span>
-                            </div>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Designed and programmed over 150 randomized statistics problems using <strong>Perl</strong> and <strong>HTML</strong> for the Statistics Department’s e-learning platform.</li>
@@ -234,15 +216,11 @@ gtag('config', 'G-10S5HCH3W3');
 
                     <div class="job-item">
                         <div class="job-header">
-                            <div class="job-title-line">
-                                <span class="job-role">Undergraduate Data Science Researcher</span>
+                            <span class="job-role">Undergraduate Data Science Researcher</span>
+                            <span class="job-meta">
                                 <span class="job-company">@ Purdue University</span>
-                            </div>
-                            <div class="job-meta-line">
                                 <span class="job-date">Aug 2023 – May 2024</span>
-                                <span class="job-meta-sep">·</span>
-                                <span class="job-location">West Lafayette, IN</span>
-                            </div>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Collaborated with <strong>Beck’s Hybrids Inc.</strong> to analyze seed quality and germination factors using <strong>Python, R, and SQL</strong>.</li>
@@ -253,15 +231,11 @@ gtag('config', 'G-10S5HCH3W3');
 
                     <div class="job-item">
                         <div class="job-header">
-                            <div class="job-title-line">
-                                <span class="job-role">Data Analytics Intern</span>
+                            <span class="job-role">Data Analytics Intern</span>
+                            <span class="job-meta">
                                 <span class="job-company">@ Laon People Inc.</span>
-                            </div>
-                            <div class="job-meta-line">
                                 <span class="job-date">May 2023 – Jul 2023</span>
-                                <span class="job-meta-sep">·</span>
-                                <span class="job-location">Seongnam, South Korea</span>
-                            </div>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Contributed to image-based defect detection research for <strong>NAVI AI Software</strong>, integrating <strong>OpenCV</strong> and deep learning-based analytics.</li>
@@ -272,15 +246,11 @@ gtag('config', 'G-10S5HCH3W3');
 
                     <div class="job-item">
                         <div class="job-header">
-                            <div class="job-title-line">
-                                <span class="job-role">International Student Office Assistant</span>
+                            <span class="job-role">International Student Office Assistant</span>
+                            <span class="job-meta">
                                 <span class="job-company">@ Foothill College</span>
-                            </div>
-                            <div class="job-meta-line">
                                 <span class="job-date">Feb 2022 – Dec 2022</span>
-                                <span class="job-meta-sep">·</span>
-                                <span class="job-location">Los Altos Hills, CA</span>
-                            </div>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Managed and analyzed international student visit data using <strong>Excel VBA</strong> to forecast service demand and optimize resource allocation.</li>
@@ -389,8 +359,10 @@ gtag('config', 'G-10S5HCH3W3');
                     <div class="job-item">
                         <div class="job-header">
                             <span class="job-role">Quality Assurance Analyst (Volunteer)</span>
-                            <span class="job-company">@ American Red Cross</span>
-                            <span class="job-date">2024–2025</span>
+                            <span class="job-meta">
+                                <span class="job-company">@ American Red Cross</span>
+                                <span class="job-date">2024–2025</span>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Ensured data integrity and process compliance for disaster calls.</li>
@@ -400,8 +372,10 @@ gtag('config', 'G-10S5HCH3W3');
                     <div class="job-item">
                         <div class="job-header">
                             <span class="job-role">Rehabilitation Volunteer</span>
-                            <span class="job-company">@ St. Joseph Rehabilitation Center</span>
-                            <span class="job-date">2012–2015</span>
+                            <span class="job-meta">
+                                <span class="job-company">@ St. Joseph Rehabilitation Center</span>
+                                <span class="job-date">2012–2015</span>
+                            </span>
                         </div>
                         <ul class="job-details">
                             <li>Supported senior disabilities care and rehabilitation in a family-based service role.</li>
