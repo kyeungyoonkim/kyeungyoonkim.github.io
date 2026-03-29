@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>STAT 506 — Titanic Analysis (SAS) | Yoon Kim</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20260229a" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="assets/js/theme-switcher.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10S5HCH3W3');
+    </script>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About</a></li>
+                <li class="active"><a href="generic.html">Projects</a></li>
+                <li><a href="generic2.html">Learning</a></li>
+                <li><a href="elements.html">Skills</a></li>
+                <li><a href="elements2.html">CV & Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle" target="_blank" rel="noopener"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <h1>STAT 506 Final: Titanic Analysis (SAS)</h1>
+                    <p><strong>Fall 2024</strong> · Purdue STAT 506 — Base SAS programming applied to the classic Titanic passenger dataset.</p>
+                </header>
+
+                <span class="image main"><img src="images/pic01.jpg" alt="Data analysis project" /></span>
+
+                <h2>Summary</h2>
+                <p>
+                    Course final project that walks through a full SAS workflow on the Titanic dataset (CSV): import and metadata review,
+                    controlled listing and subsetting, DATA-step derivations, sorting with group logic (RETAIN, sum statement, FIRST./LAST.),
+                    character and concatenation functions, SQL extracts and sorts, user-defined permanent formats with PROC FREQ,
+                    transposition for reshaped reporting, documented titles and footnotes with macro variables, and export to CSV, another format, and Excel via LIBNAME.
+                </p>
+
+                <h2>Data</h2>
+                <p>
+                    Public Titanic passenger data (survival, class, demographics, fare, cabin, embarkation port, etc.), commonly used for teaching and on platforms such as Kaggle.
+                    Variables include PassengerID, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, and Embarked.
+                </p>
+
+                <h2>What the write-up demonstrates</h2>
+                <ul>
+                    <li><strong>Ingestion &amp; documentation:</strong> PROC IMPORT, PROC CONTENTS (VARNUM)</li>
+                    <li><strong>Reporting basics:</strong> PROC PRINT with OBS=, VAR, WHERE (IN/LIKE), multiple formats</li>
+                    <li><strong>DATA step:</strong> SET, WHERE, DROP/KEEP, FORMAT, LENGTH, conditional assignments for new variables</li>
+                    <li><strong>By-group processing:</strong> PROC SORT, RETAIN, sum statement, FIRST./LAST. in conditionals</li>
+                    <li><strong>Character tools:</strong> SUBSTR, LENGTH, SCAN, PROPCASE, CATX (and related)</li>
+                    <li><strong>PROC SQL:</strong> create reduced tables, WHERE subsets, ORDER BY two columns</li>
+                    <li><strong>Formats &amp; frequency:</strong> VALUE formats (character and numeric), permanent catalog, PROC FREQ</li>
+                    <li><strong>Reshape:</strong> PROC TRANSPOSE (BY, OUT=, NAME=, PREFIX=) with PROC PRINT of result</li>
+                    <li><strong>Documentation &amp; delivery:</strong> TITLE/TITLE2/FOOTNOTE with macro variables, LABEL, clear titles; PROC EXPORT (CSV + other); Excel via LIBNAME</li>
+                </ul>
+
+                <h2>Links</h2>
+                <ul class="actions">
+                    <li><a href="generic.html" class="button">Back to Projects</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="copyright">
+            <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

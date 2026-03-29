@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Beck's Hybrids — Seed Quality &amp; Germination (Data Mine) | Yoon Kim</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20260229a" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="assets/js/theme-switcher.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10S5HCH3W3');
+    </script>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About</a></li>
+                <li class="active"><a href="generic.html">Projects</a></li>
+                <li><a href="generic2.html">Learning</a></li>
+                <li><a href="elements.html">Skills</a></li>
+                <li><a href="elements2.html">CV & Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle" target="_blank" rel="noopener"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <h1>Beck's Hybrids: Seed Quality &amp; Germination</h1>
+                    <p><strong>2023–2024</strong> · Purdue <em>The Data Mine</em> — Corporate Partners Symposium poster with Beck's Hybrids.</p>
+                </header>
+
+                <span class="image main"><img src="images/pic03.jpg" alt="Research and data analysis" /></span>
+
+                <h2>Context</h2>
+                <p>
+                    Beck's Hybrids is the largest family-owned retail seed company in the United States and the third-largest seed brand nationally, supplying hybrid seed to farmers across the Midwest.
+                    Our student team partnered with Beck's through The Data Mine's corporate program, using field records and germination lab results to study drivers of seed quality and test performance.
+                </p>
+
+                <h2>Role &amp; team</h2>
+                <p>
+                    I worked alongside Austin Edwards, Willow Morningstar, Jennifer Sheng, Tri Vo, Audrey Ward, and Bruce Ward.
+                    Beck's collaborators included Will Hirschfeld, Sean Hostetler, Christian Rockwell, and Emily Tuttle; Data Mine mentors were Kevin Amstutz, Cai Chen, Doug Crabill, and Emily Hoeing, with TA support from Mihika Deshmukh.
+                </p>
+
+                <h2>Approach</h2>
+                <p>
+                    We used <strong>R</strong> to clean the data and build analysis-ready subsets, and <strong>Python</strong> for further manipulation, statistical comparisons, and visualization.
+                    Work spanned germination outcomes, herbicide applications (including defoliant use), planting and harvest timing, and harvested moisture.
+                </p>
+                <p>
+                    In the fall we focused on planting/harvest dates and moisture; in the spring we organized into hybrid placement and defoliant–vigor sub-teams.
+                    The goal was to highlight factors in Beck's germination pipeline that are observable in the data and, where possible, actionable.
+                </p>
+
+                <h2>Selected findings</h2>
+                <ul>
+                    <li><strong>Defoliant (defol):</strong> Compared to seed from runs without defol, saturated germination differed strongly when defol was used (Student's <em>t</em>-test, <em>p</em> ≈ 2.2×10<sup>−16</sup>); the team also tied defol use to reduced seedling vigor in complementary analyses.</li>
+                    <li><strong>Moisture vs. germination:</strong> Lower seed moisture aligned with better warm germination scores; cold germination versus absolute deviation from recommended moisture was explored with a trendline—no clear linear pattern emerged.</li>
+                    <li><strong>Timing and yield (2021 crop data):</strong> Peak planting yields appeared in late May (main window late April–May); harvest concentrated around October with an upward trend from late September through November.</li>
+                    <li><strong>Hybrids across locations:</strong> For the top-yielding hybrids over three years, geographic coverage varied (e.g., some locations grew nearly all top entries while others grew very few), which informs how location interacts with hybrid performance.</li>
+                </ul>
+
+                <h2>Takeaway</h2>
+                <p>
+                    The poster argues that commercial seed operations generate rich, decision-relevant signals: moisture management, chemical programs, and calendar timing all show up in lab and field outcomes, even though weather remains a major external constraint.
+                    Natural extensions include deeper modeling of weather effects on germination.
+                </p>
+
+                <h2>Links</h2>
+                <ul class="actions">
+                    <li><a href="documents/Becks-Hybrids-Symposium.pdf" class="button primary" download>Download symposium PDF</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLikcTHOT0V5LTACj8KIL87DMHPAKeP8Fq" class="button" target="_blank" rel="noopener">Data Mine symposium recordings</a></li>
+                    <li><a href="generic.html" class="button">Back to Projects</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="copyright">
+            <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
