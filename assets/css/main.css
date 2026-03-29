@@ -4975,3 +4975,207 @@ textarea:focus-visible {
 	outline: 2px solid #0d5c63;
 	outline-offset: 2px;
 }
+
+/* ========== Minimal professional shell (light, no hero photo) ========== */
+:root {
+	--page-bg: #f1f5f9;
+	--surface: #ffffff;
+	--text: #0f172a;
+	--text-muted: #64748b;
+	--border: #e2e8f0;
+	--accent: #0d5c63;
+}
+
+html {
+	background-color: var(--page-bg) !important;
+}
+
+body {
+	background-color: var(--page-bg) !important;
+	color: #334155;
+}
+
+#wrapper > .bg {
+	background-color: var(--page-bg) !important;
+	background-image: none !important;
+}
+
+#wrapper.fade-in:before {
+	background: var(--page-bg) !important;
+}
+
+/* Header */
+#header {
+	color: var(--text) !important;
+	height: 7rem !important;
+	padding-bottom: 4.5rem !important;
+}
+
+#header input, #header select, #header textarea,
+#header strong, #header b,
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+	color: var(--text) !important;
+}
+
+#header a {
+	color: var(--text) !important;
+	border-bottom-color: rgba(15, 23, 42, 0.2) !important;
+}
+
+#header a:hover {
+	color: var(--accent) !important;
+}
+
+#header .logo {
+	border-width: 2px !important;
+	border-color: var(--border) !important;
+	color: var(--text) !important;
+	font-weight: 700 !important;
+	font-size: 1.35rem !important;
+	letter-spacing: -0.02em !important;
+	text-transform: none !important;
+	padding: 0.6rem 1.15rem !important;
+}
+
+#header .logo:hover {
+	border-color: var(--accent) !important;
+	color: var(--accent) !important;
+}
+
+@media screen and (max-width: 736px) {
+
+	#header .logo {
+		font-size: 1.15rem !important;
+	}
+
+}
+
+/* Nav */
+#nav {
+	background: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05) !important;
+	color: var(--text) !important;
+}
+
+#nav ul.divided li {
+	border-top-color: var(--border) !important;
+}
+
+#nav input, #nav select, #nav textarea,
+#nav strong, #nav b,
+#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
+	color: var(--text) !important;
+}
+
+#nav a {
+	color: #475569 !important;
+	border-bottom-color: transparent !important;
+}
+
+#nav a:hover {
+	color: var(--accent) !important;
+}
+
+#nav ul.links {
+	font-weight: 600 !important;
+	letter-spacing: 0.02em !important;
+	text-transform: none !important;
+}
+
+#nav ul.links li a:hover {
+	background-color: #f1f5f9 !important;
+	color: var(--accent) !important;
+}
+
+#nav ul.links li.active {
+	background-color: #f8fafc !important;
+}
+
+#nav ul.links li.active a {
+	color: var(--text) !important;
+	font-weight: 700 !important;
+}
+
+#nav ul.icons li a.icon:before {
+	color: #64748b !important;
+}
+
+#nav ul.icons li a.icon:hover:before {
+	color: var(--accent) !important;
+}
+
+#nav ul.icons.alt li .icon:before {
+	box-shadow: inset 0 0 0 2px #94a3b8 !important;
+}
+
+#nav ul.icons.alt li a.icon:hover:before {
+	box-shadow: inset 0 0 0 2px var(--accent) !important;
+}
+
+/* Main column */
+#main {
+	background-color: var(--surface) !important;
+	border: 1px solid var(--border) !important;
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+}
+
+#main > * {
+	border-top-color: var(--border) !important;
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+	text-transform: none !important;
+	letter-spacing: -0.03em !important;
+	font-weight: 700 !important;
+}
+
+#main > .post header.major > h1,
+#main > .post header.major > h2 {
+	font-weight: 700 !important;
+}
+
+/* Footer credit */
+#copyright {
+	color: var(--text-muted) !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.02em !important;
+	text-transform: none !important;
+}
+
+#copyright input, #copyright select, #copyright textarea,
+#copyright strong, #copyright b,
+#copyright h1, #copyright h2, #copyright h3, #copyright h4, #copyright h5, #copyright h6 {
+	color: var(--text-muted) !important;
+}
+
+#copyright a {
+	color: #475569 !important;
+	border-bottom-color: rgba(71, 85, 105, 0.35) !important;
+}
+
+#copyright a:hover {
+	color: var(--accent) !important;
+}
+
+/* Mobile menu */
+#navPanelToggle {
+	color: var(--text) !important;
+	background-color: rgba(255, 255, 255, 0.95) !important;
+	border: 1px solid var(--border) !important;
+	box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08) !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.02em !important;
+	text-transform: none !important;
+}
+
+#navPanelToggle.alt {
+	background-color: var(--surface) !important;
+	color: var(--text) !important;
+}
+
+#navPanel .links li a {
+	font-weight: 600 !important;
+	letter-spacing: 0.02em !important;
+	text-transform: none !important;
+}
