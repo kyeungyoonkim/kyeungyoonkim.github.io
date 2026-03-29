@@ -9,7 +9,7 @@
 	} else {
 		try { theme = sessionStorage.getItem('portfolio-theme'); } catch (e) {}
 	}
-	var themeVer = '20260214b';
+	var themeVer = '20260214c';
 	if (theme && themes[theme]) {
 		var link = document.createElement('link');
 		link.rel = 'stylesheet';

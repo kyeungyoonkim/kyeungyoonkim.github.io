@@ -4978,12 +4978,15 @@ textarea:focus-visible {
 
 /* ========== Minimal professional shell (light, no hero photo) ========== */
 :root {
-	--page-bg: #f1f5f9;
+	/* Very subtle green-gray (easier on eyes than cool slate-blue) */
+	--page-bg: #f3f6f4;
 	--surface: #ffffff;
 	--text: #0f172a;
 	--text-muted: #64748b;
-	--border: #e2e8f0;
+	--border: #dde8e3;
 	--accent: #0d5c63;
+	--nav-hover: #e8f0ec;
+	--nav-active: #eef5f1;
 }
 
 html {
@@ -5026,20 +5029,25 @@ body {
 	color: var(--accent) !important;
 }
 
+/* Logo: no box — clean wordmark + subtle hover underline */
 #header .logo {
-	border-width: 2px !important;
-	border-color: var(--border) !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
 	color: var(--text) !important;
 	font-weight: 700 !important;
 	font-size: 1.35rem !important;
-	letter-spacing: -0.02em !important;
+	letter-spacing: -0.03em !important;
 	text-transform: none !important;
-	padding: 0.6rem 1.15rem !important;
+	padding: 0.2rem 0 !important;
+	line-height: 1.2 !important;
+	border-bottom: 2px solid transparent !important;
+	transition: color 0.2s ease, border-color 0.2s ease !important;
 }
 
 #header .logo:hover {
-	border-color: var(--accent) !important;
 	color: var(--accent) !important;
+	border-bottom-color: var(--accent) !important;
 }
 
 @media screen and (max-width: 736px) {
@@ -5084,12 +5092,12 @@ body {
 }
 
 #nav ul.links li a:hover {
-	background-color: #f1f5f9 !important;
+	background-color: var(--nav-hover) !important;
 	color: var(--accent) !important;
 }
 
 #nav ul.links li.active {
-	background-color: #f8fafc !important;
+	background-color: var(--nav-active) !important;
 }
 
 #nav ul.links li.active a {
