@@ -4888,10 +4888,10 @@ input, select, textarea {
 }
 
 .blog-post h2 {
-	font-size: 2.2rem;
-	margin-bottom: 1rem;
-	line-height: 1.3;
-	font-weight: 700;
+	font-size: 1.4rem;
+	margin-bottom: 0.75rem;
+	line-height: 1.35;
+	font-weight: 600;
 	text-transform: none;
 	letter-spacing: -0.02em;
 	font-family: "Inter", system-ui, sans-serif;
@@ -4959,7 +4959,7 @@ input, select, textarea {
 		padding: 2rem 0.5rem;
 	}
 	.blog-post h2 {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 	.blog-post p {
 		font-size: 1rem;
