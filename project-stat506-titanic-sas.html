@@ -42,36 +42,45 @@
             <section class="post">
                 <header class="major">
                     <h1>STAT 506 Final: Titanic Analysis (SAS)</h1>
-                    <p><strong>Fall 2024</strong> · Purdue STAT 506 — Base SAS programming applied to the classic Titanic passenger dataset.</p>
+                    <p><strong>October 2024</strong> · Purdue STAT 506 — Hands-on Base SAS through a standard teaching dataset (CSV).</p>
                 </header>
 
                 <span class="image main"><img src="images/pic01.jpg" alt="Data analysis project" /></span>
 
-                <h2>Summary</h2>
-                <p>
-                    Course final project that walks through a full SAS workflow on the Titanic dataset (CSV): import and metadata review,
-                    controlled listing and subsetting, DATA-step derivations, sorting with group logic (RETAIN, sum statement, FIRST./LAST.),
-                    character and concatenation functions, SQL extracts and sorts, user-defined permanent formats with PROC FREQ,
-                    transposition for reshaped reporting, documented titles and footnotes with macro variables, and export to CSV, another format, and Excel via LIBNAME.
-                </p>
+                <h2>📘 SAS programming skills</h2>
+                <p style="margin-top: -0.5rem;"><strong>Titanic dataset:</strong> implementing core SAS data-handling features end to end.</p>
 
-                <h2>Data</h2>
-                <p>
-                    Public Titanic passenger data (survival, class, demographics, fare, cabin, embarkation port, etc.), commonly used for teaching and on platforms such as Kaggle.
-                    Variables include PassengerID, Survived, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, and Embarked.
-                </p>
-
-                <h2>What the write-up demonstrates</h2>
+                <h3>Techniques covered</h3>
                 <ul>
-                    <li><strong>Ingestion &amp; documentation:</strong> PROC IMPORT, PROC CONTENTS (VARNUM)</li>
-                    <li><strong>Reporting basics:</strong> PROC PRINT with OBS=, VAR, WHERE (IN/LIKE), multiple formats</li>
-                    <li><strong>DATA step:</strong> SET, WHERE, DROP/KEEP, FORMAT, LENGTH, conditional assignments for new variables</li>
-                    <li><strong>By-group processing:</strong> PROC SORT, RETAIN, sum statement, FIRST./LAST. in conditionals</li>
-                    <li><strong>Character tools:</strong> SUBSTR, LENGTH, SCAN, PROPCASE, CATX (and related)</li>
-                    <li><strong>PROC SQL:</strong> create reduced tables, WHERE subsets, ORDER BY two columns</li>
-                    <li><strong>Formats &amp; frequency:</strong> VALUE formats (character and numeric), permanent catalog, PROC FREQ</li>
-                    <li><strong>Reshape:</strong> PROC TRANSPOSE (BY, OUT=, NAME=, PREFIX=) with PROC PRINT of result</li>
-                    <li><strong>Documentation &amp; delivery:</strong> TITLE/TITLE2/FOOTNOTE with macro variables, LABEL, clear titles; PROC EXPORT (CSV + other); Excel via LIBNAME</li>
+                    <li>✓ Data I/O — PROC IMPORT / PROC EXPORT, LIBNAME (including Excel)</li>
+                    <li>✓ Data manipulation — DATA step, SET, WHERE, KEEP / DROP</li>
+                    <li>✓ Character functions — SUBSTR, SCAN, CATX, PROPCASE (and related)</li>
+                    <li>✓ SQL — PROC SQL: SELECT, WHERE, ORDER BY, CREATE TABLE</li>
+                    <li>✓ Sorting &amp; grouped logic — PROC SORT, RETAIN, FIRST. / LAST., sum statement</li>
+                    <li>✓ User-defined formats — PROC FORMAT, VALUE (with PROC FREQ)</li>
+                    <li>✓ Restructuring — PROC TRANSPOSE (BY, OUT=, NAME=, PREFIX=)</li>
+                    <li>✓ Reporting — TITLE, FOOTNOTE, LABEL, PROC PRINT (including macro variables in titles)</li>
+                </ul>
+
+                <h2>Project overview</h2>
+                <p>
+                    The Titanic passenger dataset (<strong>891 observations, 12 variables</strong>) is a common benchmark for introductory analytics.
+                    This final project uses it to practice the main SAS programming patterns required in the course: moving data from flat files into SAS,
+                    shaping and enriching tables, summarizing and printing results, and writing outputs back out in multiple formats.
+                </p>
+
+                <h2>What I implemented</h2>
+                <ul>
+                    <li>An end-to-end pipeline: <strong>import CSV → clean and subset → create new variables → export</strong> results.</li>
+                    <li>Parallel use of <strong>DATA step</strong> and <strong>PROC SQL</strong> where each approach fits best.</li>
+                    <li>Formal coverage of <strong>ten syllabus topics</strong> (topics 1, 3, 5, 7, 10, 12, 15, 18, 22, and 28), including PROC CONTENTS, controlled PROC PRINT,
+                    formats, PROC SQL queries, BY-group processing, character functions, permanent formats, PROC TRANSPOSE, and documented listings.</li>
+                </ul>
+
+                <h2>Deliverables</h2>
+                <ul>
+                    <li><strong><code>titanic.sas</code></strong> — single program containing the full SAS code for the assignment.</li>
+                    <li><strong><code>STAT506_final_YoonKim.pdf</code></strong> — write-up with log snippets, procedure output, and narrative (course submission).</li>
                 </ul>
 
                 <h2>Links</h2>
