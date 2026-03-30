@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Motion Detection &amp; Localization (Lab 5) | Yoon Kim</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css?v=20260229a" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-10S5HCH3W3');
+    </script>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <header id="header">
+            <a href="index.html" class="logo">Yoon Kim Portfolio</a>
+        </header>
+
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">About</a></li>
+                <li class="active"><a href="generic.html">Projects</a></li>
+                <li><a href="generic2.html">Learning</a></li>
+                <li><a href="elements.html">Skills</a></li>
+                <li><a href="elements2.html">CV & Contact</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.kaggle.com/yoonexplorer" class="icon brands fa-kaggle" target="_blank" rel="noopener"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kyoonkim" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/kyeungyoonkim" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <h1>Motion Detection &amp; Localization</h1>
+                    <p><strong>November 2024</strong> · Laboratory 5 — Team embedded-vision project from hardware bring-up to a simple motion-localization rule on live camera frames.</p>
+                </header>
+
+                <span class="image main"><img src="images/pic04.jpg" alt="Embedded systems and computer vision" /></span>
+
+                <h2>Summary</h2>
+                <p>
+                    In a group of three, we built a microcontroller imaging pipeline on a breadboard, streamed grayscale frames into Python over USB serial,
+                    and applied classical computer vision—background subtraction plus a grid-based decision rule—to highlight <em>where</em> motion occurs in near real time.
+                </p>
+
+                <h2>Team</h2>
+                <p>Yoon Kim · Esha Garg · Yun-Jen Wu</p>
+
+                <h2>Hardware setup</h2>
+                <p>
+                    We wired a <strong>Raspberry Pi Pico</strong> to an <strong>Arducam HM01B0</strong> on a breadboard (power, I²C, and parallel-style camera signals per the lab pinout: e.g. SCL/SDA, VSYNC, HREF, PCLK, data line, GND).
+                    After verifying connections, we flashed the provided camera firmware (<code>arducam.uf2</code>) via BOOTSEL so the Pico could capture images in the embedded environment (Thonny / MicroPython ecosystem as specified in the course materials).
+                </p>
+
+                <h2>Data acquisition</h2>
+                <p>
+                    On the host PC we used Python’s <strong><code>pyserial</code></strong> library to open a serial link to the Pico, synchronize on a frame delimiter, and read a fixed <strong>96×96</strong> byte buffer into a NumPy grayscale image.
+                    Frames were displayed and buffered with Matplotlib for debugging, then fed into the vision pipeline.
+                </p>
+
+                <h2>Background subtraction</h2>
+                <p>
+                    We used OpenCV’s <strong><code>cv2.createBackgroundSubtractorMOG2</code></strong> (shadow detection disabled) to adapt a background model and produce a binary <strong>foreground mask</strong>:
+                    static scene content trends toward background (0), while moving regions appear as foreground (255), which is well suited when the camera and lighting are relatively stable.
+                </p>
+
+                <h2>Motion localization</h2>
+                <p>
+                    We partitioned the frame into <strong>four quadrants</strong>. For each quadrant we counted mask pixels with grayscale intensity <strong>above 128</strong>.
+                    If that count exceeded <strong>25% of the quadrant’s pixel count</strong>, we treated the quadrant as containing motion and drew a <strong>bounding rectangle</strong> with <code>cv2.rectangle</code> on the live display—turning the mask statistics into a simple, interpretable “motion here” visualization.
+                </p>
+
+                <h2>Challenges &amp; notes</h2>
+                <p>
+                    Serial capture is sensitive to disconnects and port contention; the lab notebook also explored robust Pico detection by USB vendor ID and handling dropped reads when the device is busy or unplugged.
+                    The approach trades model complexity for transparency: easy to tune (threshold, grid size) and to explain as a classroom motion alarm.
+                </p>
+
+                <h2>Deliverable</h2>
+                <p>
+                    Full write-up with wiring notes, code cells, and discussion is in the submitted lab report (exported notebook / PDF).
+                </p>
+
+                <h2>Links</h2>
+                <ul class="actions">
+                    <li><a href="documents/Lab05-motion-detection-YoonKim.pdf" class="button primary" download>Download lab report (PDF)</a></li>
+                    <li><a href="generic.html" class="button">Back to Projects</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="copyright">
+            <ul><li>&copy; Yoon Kim</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
