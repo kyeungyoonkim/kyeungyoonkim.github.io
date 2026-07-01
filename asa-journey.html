@@ -8,74 +8,31 @@
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <style>
     .journey-section {
-        margin-bottom: 3rem;
+        margin-bottom: 2.2rem;
     }
 
-    .status-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 0.75rem;
-        margin-top: 1rem;
-    }
-
-    .status-card {
-        border: 1px solid #d8e0ec;
-        border-radius: 0.6rem;
-        padding: 0.85rem 1rem;
-        background: #f8fbff;
-    }
-
-    .status-label {
-        display: inline-block;
-        font-size: 0.72rem;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        font-weight: 700;
-        border-radius: 999px;
-        padding: 0.2rem 0.55rem;
-        margin-bottom: 0.45rem;
-    }
-
-    .status-done {
-        background: #dcfce7;
-        color: #166534;
-    }
-
-    .status-progress {
-        background: #dbeafe;
-        color: #1e3a8a;
-    }
-
-    .status-plan {
-        background: #f1f5f9;
-        color: #475569;
-    }
-
-    .status-card h3 {
-        margin: 0 0 0.3rem 0;
-        font-size: 1.02rem;
-    }
-
-    .status-card p {
-        margin: 0;
-        color: #475569;
-        font-size: 0.94rem;
-        line-height: 1.55;
-    }
-
-    .timeline-list {
+    .simple-checklist {
         list-style: none;
         padding-left: 0;
+        margin: 0;
     }
 
-    .timeline-list li {
-        border-left: 3px solid #d8e0ec;
-        padding: 0.25rem 0 0.95rem 0.9rem;
-        margin-left: 0.2rem;
+    .simple-checklist li {
+        border: 1px solid #d8e0ec;
+        background: #f8fbff;
+        border-radius: 0.55rem;
+        padding: 0.7rem 0.9rem;
+        margin-bottom: 0.55rem;
+        color: #1f2937;
     }
 
-    .timeline-list strong {
-        color: #0b1b34;
+    .status-line {
+        display: inline-block;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        color: #1e3a8a;
+        margin-bottom: 0.2rem;
     }
 </style>
 </head>
@@ -108,53 +65,32 @@
                 <header class="major">
                     <span class="date">Updated July 2026</span>
                     <h1>ASA Journey</h1>
-                    <p>Progress tracker for my short-term ASA goal and long-term FSA plan in health actuarial work.</p>
+                    <p>Simple tracker for my ASA progress.</p>
                 </header>
 
                 <div class="journey-section">
-                    <h2>Current Objective</h2>
-                    <p><strong>Near-term:</strong> Build actuarial fundamentals and pass ASA requirements step by step while developing practical health insurance analytics skills.<br />
-                    <strong>Long-term:</strong> Continue toward FSA after achieving ASA and gaining industry experience.</p>
+                    <h2>Goal</h2>
+                    <p><strong>Now:</strong> ASA<br />
+                    <strong>Later:</strong> FSA (Health track)</p>
                 </div>
 
                 <div class="journey-section">
-                    <h2>ASA Requirement Tracker</h2>
-                    <div class="status-grid">
-                        <article class="status-card">
-                            <span class="status-label status-progress">In Progress</span>
-                            <h3>Exam Track Preparation</h3>
-                            <p>Building exam-focused study routines and practice cadence for ASA pathway exams.</p>
-                        </article>
-                        <article class="status-card">
-                            <span class="status-label status-plan">Planned</span>
-                            <h3>VEE Components</h3>
-                            <p>Planning formal tracking for VEE requirements and submission-ready documentation.</p>
-                        </article>
-                        <article class="status-card">
-                            <span class="status-label status-progress">In Progress</span>
-                            <h3>Technical Foundations</h3>
-                            <p>Strengthening probability, statistics, SQL/Python, and data communication for actuarial workflows.</p>
-                        </article>
-                        <article class="status-card">
-                            <span class="status-label status-done">Completed</span>
-                            <h3>Quantitative Degree Base</h3>
-                            <p>B.S. in Applied Statistics completed, forming the quantitative base for actuarial development.</p>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="journey-section">
-                    <h2>Milestone Timeline</h2>
-                    <ul class="timeline-list">
-                        <li><strong>Fall 2026:</strong> Start at Temple University and continue ASA-oriented preparation.</li>
-                        <li><strong>Fall 2027 (target):</strong> Graduate and transition into full-time health actuarial roles.</li>
-                        <li><strong>Post-ASA:</strong> Progress toward FSA with a healthcare specialization focus.</li>
+                    <h2>Checklist</h2>
+                    <ul class="simple-checklist">
+                        <li><span class="status-line">DONE</span><br />B.S. in Applied Statistics</li>
+                        <li><span class="status-line">IN PROGRESS</span><br />ASA exam prep routine</li>
+                        <li><span class="status-line">PLANNED</span><br />VEE requirement tracking</li>
+                        <li><span class="status-line">IN PROGRESS</span><br />Health insurance analytics portfolio</li>
                     </ul>
                 </div>
 
                 <div class="journey-section">
-                    <h2>How I Update This Page</h2>
-                    <p>I will update each item as milestones are completed (exam outcomes, VEE status, and role experience) so this page works as a living ASA progress dashboard.</p>
+                    <h2>Milestones</h2>
+                    <ul class="simple-checklist">
+                        <li><span class="status-line">FALL 2026</span><br />Temple University start</li>
+                        <li><span class="status-line">FALL 2027 TARGET</span><br />Graduate</li>
+                        <li><span class="status-line">NEXT</span><br />ASA completion, then FSA path</li>
+                    </ul>
                 </div>
             </section>
         </div>
