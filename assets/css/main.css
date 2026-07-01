@@ -4982,17 +4982,17 @@ textarea:focus-visible {
 	outline-offset: 2px;
 }
 
-/* ========== Minimal professional shell (light, no hero photo) ========== */
+/* ========== Health actuarial theme (clean, analytical, professional) ========== */
 :root {
-	/* Very subtle green-gray (easier on eyes than cool slate-blue) */
-	--page-bg: #f3f6f4;
+	/* Neutral blue-gray palette for a finance/actuarial tone */
+	--page-bg: #eef2f7;
 	--surface: #ffffff;
-	--text: #0f172a;
-	--text-muted: #64748b;
-	--border: #dde8e3;
-	--accent: #0d5c63;
-	--nav-hover: #e8f0ec;
-	--nav-active: #eef5f1;
+	--text: #0b1b34;
+	--text-muted: #5b6b83;
+	--border: #d8e0ec;
+	--accent: #1e3a8a;
+	--nav-hover: #e8eefb;
+	--nav-active: #e3ebfb;
 }
 
 html {
@@ -5002,6 +5002,42 @@ html {
 body {
 	background-color: var(--page-bg) !important;
 	color: #334155;
+}
+
+/* Global typography override for a more "credentialed analyst" look */
+body, input, select, textarea {
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+	line-height: 1.75 !important;
+}
+
+p, li {
+	font-size: 1.02rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+	letter-spacing: -0.025em !important;
+}
+
+/* Small credential chips for actuarial identity */
+.career-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin: 0.9rem 0 0.4rem 0;
+}
+
+.career-badge {
+	display: inline-block;
+	padding: 0.35rem 0.72rem;
+	border: 1px solid #c8d4ea;
+	border-radius: 999px;
+	background: #f5f8ff;
+	color: #1f376d;
+	font-size: 0.74rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
 }
 
 #wrapper > .bg {
