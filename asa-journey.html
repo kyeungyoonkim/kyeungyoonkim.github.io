@@ -11,6 +11,26 @@
         margin-bottom: 2.2rem;
     }
 
+    .pathway-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 0.7rem;
+        margin-top: 0.7rem;
+    }
+
+    .pathway-card {
+        border: 1px solid #d8e0ec;
+        background: #f8fbff;
+        border-radius: 0.55rem;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .pathway-card h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+    }
+
     .simple-checklist {
         list-style: none;
         padding-left: 0;
@@ -33,6 +53,12 @@
         letter-spacing: 0.03em;
         color: #1e3a8a;
         margin-bottom: 0.2rem;
+    }
+
+    .muted-note {
+        color: #475569;
+        font-size: 0.9rem;
+        margin-top: 0.55rem;
     }
 </style>
 </head>
@@ -65,7 +91,7 @@
                 <header class="major">
                     <span class="date">Updated July 2026</span>
                     <h1>ASA Journey</h1>
-                    <p>Simple tracker for my ASA progress.</p>
+                    <p>SOA ASA pathway tracker (my progress status).</p>
                 </header>
 
                 <div class="journey-section">
@@ -75,32 +101,57 @@
                 </div>
 
                 <div class="journey-section">
-                    <h2>ASA Exams</h2>
-                    <ul class="simple-checklist">
-                        <li><span class="status-line">PLANNED</span><br />Exam P</li>
-                        <li><span class="status-line">PLANNED</span><br />Exam FM</li>
-                        <li><span class="status-line">PLANNED</span><br />Exam FAM</li>
-                        <li><span class="status-line">PLANNED</span><br />Exam ALTAM / ASTAM</li>
-                        <li><span class="status-line">PLANNED</span><br />Exam SRM</li>
-                        <li><span class="status-line">PLANNED</span><br />Exam PA</li>
-                    </ul>
+                    <h2>ASA Pathway (SOA-style)</h2>
+                    <div class="pathway-grid">
+                        <article class="pathway-card">
+                            <h3>Foundations</h3>
+                            <ul class="simple-checklist">
+                                <li><span class="status-line">PLANNED</span><br />Exam P (Probability)</li>
+                                <li><span class="status-line">PLANNED</span><br />Exam FM (Financial Mathematics)</li>
+                                <li><span class="status-line">PLANNED</span><br />VEE Economics</li>
+                                <li><span class="status-line">PLANNED</span><br />VEE Accounting &amp; Finance</li>
+                            </ul>
+                        </article>
+                        <article class="pathway-card">
+                            <h3>Actuarial I</h3>
+                            <ul class="simple-checklist">
+                                <li><span class="status-line">PLANNED</span><br />VEE Mathematical Statistics</li>
+                                <li><span class="status-line">PLANNED</span><br />Exam FAM</li>
+                                <li><span class="status-line">PLANNED</span><br />ASF Module (Actuarial Science Foundations)</li>
+                            </ul>
+                        </article>
+                        <article class="pathway-card">
+                            <h3>Actuarial II</h3>
+                            <ul class="simple-checklist">
+                                <li><span class="status-line">PLANNED</span><br />Exam ALTAM or ASTAM</li>
+                                <li><span class="status-line">PLANNED</span><br />Exam SRM</li>
+                                <li><span class="status-line">PLANNED</span><br />Exam PA</li>
+                            </ul>
+                        </article>
+                        <article class="pathway-card">
+                            <h3>Advanced</h3>
+                            <ul class="simple-checklist">
+                                <li><span class="status-line">PLANNED</span><br />E-Learning modules &amp; assessments</li>
+                                <li><span class="status-line">PLANNED</span><br />ATPA requirement</li>
+                            </ul>
+                        </article>
+                        <article class="pathway-card">
+                            <h3>Professionalism</h3>
+                            <ul class="simple-checklist">
+                                <li><span class="status-line">PLANNED</span><br />APC (Associateship Professionalism Course)</li>
+                                <li><span class="status-line">TARGET</span><br />ASA Credential</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <p class="muted-note">Note: Exact SOA requirements can change by year, so I will keep this page updated with the latest official pathway.</p>
                 </div>
 
                 <div class="journey-section">
-                    <h2>VEE Requirements</h2>
+                    <h2>Health / Disability Focus (Career Direction)</h2>
                     <ul class="simple-checklist">
-                        <li><span class="status-line">PLANNED</span><br />VEE Economics</li>
-                        <li><span class="status-line">PLANNED</span><br />VEE Accounting &amp; Finance</li>
-                        <li><span class="status-line">PLANNED</span><br />VEE Mathematical Statistics</li>
-                    </ul>
-                </div>
-
-                <div class="journey-section">
-                    <h2>Other ASA Components</h2>
-                    <ul class="simple-checklist">
-                        <li><span class="status-line">PLANNED</span><br />SOA modules / assessments</li>
-                        <li><span class="status-line">PLANNED</span><br />APC (Associateship Professionalism Course)</li>
-                        <li><span class="status-line">TARGET</span><br />ASA completion before FSA track</li>
+                        <li><span class="status-line">FOCUS</span><br />Healthcare cost trend and risk modeling</li>
+                        <li><span class="status-line">FOCUS</span><br />Disability / health insurance pricing support</li>
+                        <li><span class="status-line">FOCUS</span><br />Data-driven policy and financial sustainability analysis</li>
                     </ul>
                 </div>
             </section>
