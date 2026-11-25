@@ -5229,3 +5229,39 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0.02em !important;
 	text-transform: none !important;
 }
+
+/* Compact site footer */
+#footer.site-footer {
+	justify-content: center;
+	background-color: #f5f5f5;
+}
+
+#footer.site-footer > section {
+	flex-basis: auto;
+	flex-grow: 0;
+	padding: 1.5rem 2rem 1.25rem 2rem;
+	border-left: 0;
+	text-align: center;
+}
+
+#footer.site-footer h3 {
+	margin: 0 0 0.55rem 0;
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+#footer.site-footer .icons {
+	justify-content: center;
+	margin: 0;
+}
+
+#footer.site-footer + #copyright {
+	margin-top: 2rem;
+}
+
+@media screen and (max-width: 980px) {
+	#footer.site-footer > section {
+		padding: 1.25rem 1.5rem;
+	}
+}
