@@ -8,6 +8,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="assets/css/main.css?v=20260701b" />
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<style>
+    .project-section-title {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto 0.5rem auto;
+        font-size: 1.65rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-transform: none;
+        font-family: Inter, system-ui, sans-serif;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+        color: #0f172a;
+    }
+    .project-container.additional {
+        padding-top: 1.5rem;
+    }
+    .project-container.additional .project-card {
+        margin-bottom: 3.5rem;
+    }
+    .project-container.additional .project-content h2 {
+        font-size: 1.55rem;
+    }
+    .project-container.additional .project-content p {
+        font-size: 0.98rem;
+        margin-bottom: 1.1rem;
+    }
+    .project-container.additional .project-image {
+        flex-basis: 48%;
+        width: 48%;
+    }
+</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-10S5HCH3W3"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -31,7 +63,7 @@ gtag('config', 'G-10S5HCH3W3');
                 <li class="active"><a href="generic.html">Projects</a></li>
                 <li><a href="generic2.html">Learning</a></li>
                 <li><a href="elements.html">Experience</a></li>
-                <li><a href="asa-journey.html">ASA Journey</a></li>
+                <li><a href="asa-journey.html">Actuarial Credentials</a></li>
 
                 <li><a href="elements2.html">CV & Contact</a></li>
             </ul>
@@ -45,10 +77,11 @@ gtag('config', 'G-10S5HCH3W3');
         <div id="main">
             
             <header class="major">
-                <h1>Data Projects</h1>
-                <p>A collection of my data analysis, visualization, and engineering projects.<br></p>
+                <h1>Projects</h1>
+                <p>This portfolio includes selected projects in applied statistics, machine learning, data analytics, and computational research. These projects show how I have applied quantitative methods and programming to real-world problems in academic and professional settings.</p>
             </header>
 
+            <h2 class="project-section-title">Featured Projects</h2>
             <div class="project-container">
 
                 <div class="project-card">
@@ -62,30 +95,11 @@ gtag('config', 'G-10S5HCH3W3');
                         <h2>Accessibility<br>Web Summarizer</h2>
                         <div class="skill-tags">
                             <span class="tag stats">Accessibility</span>
-                            <span class="tag python">NLP</span>
-                            <span class="tag stats">UX</span>
+                            <span class="tag python">Artificial Intelligence</span>
+                            <span class="tag stats">HCI</span>
                         </div>
-                        <p>A tool that summarizes web content with an accessibility-first lens (clear structure, reduced cognitive load, and screen-reader-friendly output).</p>
+                        <p>Dense web pages are often hard to scan. I built a Chrome-based summarizer that uses large language models to turn page content into a shorter, structured brief, and handled asynchronous requests between the browser and the model server. No user-study results are claimed. <a href="research.html">Research context</a>.</p>
                         <a href="accessibility-summarizer.html" class="button small-btn">View Project</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <a href="project-titanic-sas.html">
-                            <img src="images/pic01.jpg" alt="Titanic SAS analysis project" width="508" height="310" loading="lazy" decoding="async" />
-                        </a>
-                    </div>
-                    <div class="project-content">
-                        <span class="date">Oct 2024</span>
-                        <h2>Titanic Analysis<br>(SAS)</h2>
-                        <div class="skill-tags">
-                            <span class="tag stats">SAS</span>
-                            <span class="tag stats">Data prep</span>
-                            <span class="tag excel">Base SAS</span>
-                        </div>
-                        <p>Titanic (891 × 12): full SAS pipeline from CSV import to export, DATA step and PROC SQL side by side, and ten topic areas including formats, BY-groups, TRANSPOSE, and documented PROC PRINT output.</p>
-                        <a href="project-titanic-sas.html" class="button small-btn">View Project</a>
                     </div>
                 </div>
 
@@ -99,14 +113,38 @@ gtag('config', 'G-10S5HCH3W3');
                         <span class="date">2023–2024</span>
                         <h2>Beck's Hybrids<br>Symposium</h2>
                         <div class="skill-tags">
+                            <span class="tag stats">Statistical Research</span>
                             <span class="tag python">Python</span>
-                            <span class="tag stats">R</span>
-                            <span class="tag stats">Ag data</span>
+                            <span class="tag stats">Applied Statistics</span>
                         </div>
-                        <p>Purdue Corporate Partners project on seed quality and germination: field and lab data, defoliant effects on saturated germ, moisture vs. warm germ, and hybrid performance by location—presented at the 2024 symposium.</p>
+                        <p>Corporate Partners project on which field and lab factors relate to seed quality and germination. I helped prepare the data in Python and SQL, used regression and ANOVA (including defoliation and moisture), and presented at the 2024 symposium. <a href="research.html">Research</a> · <a href="documents/Becks-Hybrids-Symposium.pdf">Symposium PDF</a>.</p>
                         <a href="project-becks-hybrids-symposium.html" class="button small-btn">View Project</a>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <a href="project-titanic-sas.html">
+                            <img src="images/pic01.jpg" alt="Titanic SAS analysis project" width="508" height="310" loading="lazy" decoding="async" />
+                        </a>
+                    </div>
+                    <div class="project-content">
+                        <span class="date">Oct 2024</span>
+                        <h2>Titanic Analysis<br>(SAS)</h2>
+                        <div class="skill-tags">
+                            <span class="tag stats">Data Analytics</span>
+                            <span class="tag excel">SAS</span>
+                            <span class="tag stats">Data prep</span>
+                        </div>
+                        <p>End-to-end Base SAS pipeline on the Titanic passenger file (891 × 12): import, clean, reshape, and report, using DATA step and PROC SQL in parallel. The write-up documents formats, BY-group processing, TRANSPOSE, and PROC PRINT output.</p>
+                        <a href="project-titanic-sas.html" class="button small-btn">View Project</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="project-section-title">Additional Projects</h2>
+            <div class="project-container additional">
 
                 <div class="project-card">
                     <div class="project-image">
@@ -116,10 +154,10 @@ gtag('config', 'G-10S5HCH3W3');
                         <span class="date">May 2024</span>
                         <h2>Bike Sales<br>Performance</h2>
                         <div class="skill-tags">
+                            <span class="tag excel">Data Visualization</span>
                             <span class="tag excel">Excel</span>
-                            <span class="tag excel">Pivot Tables</span>
                         </div>
-                        <p>Constructed a sales dashboard using advanced Excel functions and Pivot Tables to track key performance indicators (KPIs) and customer demographics.</p>
+                        <p>Excel dashboard using formulas and PivotTables to track sales performance indicators and customer demographics. A public interactive demo is not posted.</p>
                         <a href="#" class="button disabled small-btn">View Project</a>
                     </div>
                 </div>
@@ -134,12 +172,10 @@ gtag('config', 'G-10S5HCH3W3');
                         <span class="date">March 2024</span>
                         <h2>College Tuition<br>Analysis</h2>
                         <div class="skill-tags">
-                            <span class="tag tableau">Tableau</span>
-                            <span class="tag stats">Correlation</span>
-                            <span class="tag stats">Data Viz</span>
+                            <span class="tag tableau">Data Visualization</span>
+                            <span class="tag stats">Data Analytics</span>
                         </div>
-                        <p>Analyzed the correlation between tuition fees and income levels across US states. 
-                        Investigated whether higher tuition correlates with increased early and mid-career pay rates.</p>
+                        <p>Tableau workbook relating U.S. tuition levels to income and to early- and mid-career pay, with filters by state and related student characteristics.</p>
                         <a href="https://public.tableau.com/views/U_S_CollegeTuitionAnalysis/USCollegetuitionanalysis" target="_blank" rel="noopener" class="button small-btn">View Dashboard</a>
                     </div>
                 </div>
@@ -152,12 +188,12 @@ gtag('config', 'G-10S5HCH3W3');
                     </div>
                     <div class="project-content">
                         <span class="date">March 2024</span>
-                        <h2>Starbucks Drinks<br>& Store Locations</h2>
+                        <h2>Starbucks Drinks<br>&amp; Store Locations</h2>
                         <div class="skill-tags">
-                            <span class="tag tableau">Tableau</span>
-                            <span class="tag stats">Geospatial</span>
+                            <span class="tag tableau">Data Visualization</span>
+                            <span class="tag stats">Data Analytics</span>
                         </div>
-                        <p>An interactive dashboard visualizing nutritional features of Starbucks drinks and analyzing store distribution patterns globally.</p>
+                        <p>Interactive Tableau dashboard of drink nutrition attributes and geographic store locations.</p>
                         <a href="https://public.tableau.com/views/Starbucks_drink_analysis/Dashboard1" target="_blank" rel="noopener" class="button small-btn">View Dashboard</a>
                     </div>
                 </div>
@@ -176,7 +212,7 @@ gtag('config', 'G-10S5HCH3W3');
                             <span class="tag stats">Computer vision</span>
                             <span class="tag excel">Embedded</span>
                         </div>
-                        <p>Course lab: microcontroller camera on a breadboard, serial frame capture on PC, background subtraction and a grid-based rule to localize motion (implementation not published).</p>
+                        <p>Course laboratory: capture frames from a microcontroller camera, then use background subtraction and a grid rule to mark where motion appears. Source code is not public.</p>
                         <a href="project-motion-detection-lab5.html" class="button small-btn">View Project</a>
                     </div>
                 </div>
@@ -189,16 +225,23 @@ gtag('config', 'G-10S5HCH3W3');
                     </div>
                     <div class="project-content">
                         <span class="date">May 2023</span>
-                        <h2>Major & Salary<br>Exploratory Analysis</h2>
+                        <h2>Major &amp; Salary<br>Exploratory Analysis</h2>
                         <div class="skill-tags">
+                            <span class="tag python">Data Analytics</span>
                             <span class="tag python">Python</span>
-                            <span class="tag python">Pandas</span>
-                            <span class="tag python">Seaborn</span>
+                            <span class="tag stats">Applied Statistics</span>
                         </div>
-                        <p>Conducted EDA on college graduate datasets to identify popular majors and the correlation between field of study, employment rates, and salary outcomes.</p>
+                        <p>Exploratory analysis of college-graduate data on majors, employment, and salary patterns using Python, Pandas, and Seaborn.</p>
                         <a href="https://www.kaggle.com/code/yoonexplorer/college-students-major-eda" target="_blank" rel="noopener" class="button small-btn">View Code on Kaggle</a>
                     </div>
                 </div>
+
+                <!--
+                Future graduate-level projects (do not display until materials exist):
+                Medical Claims Cost Prediction; Healthcare Cost and Utilization Analysis;
+                Causal Inference in Healthcare; Actuarial Loss Modeling;
+                Credit Risk and Expected Profit Optimization; Predictive Modeling and Model Validation.
+                -->
 
             </div>
             </div>
